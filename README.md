@@ -1,1 +1,1 @@
-# Multi-Modal-Deep-Learning-Framework-for-ancer-Morphological-and-Genomic-Profiling-Using-PyTorch
+# Multi-Modal-Deep-Learning-Framework-for-Cancer-Morphological-and-Genomic-Profiling-Using-PyTorch
