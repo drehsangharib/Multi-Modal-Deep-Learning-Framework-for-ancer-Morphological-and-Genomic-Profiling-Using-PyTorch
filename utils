@@ -1,1 +1,25 @@
+import torch
+from torch.utils.data import Dataset
+import numpy as np
+
+class CLLSampleDataset(Dataset):
+    def __init__(self, num_samples=100, image_shape=(1, 128, 128), gene_dim=1000):
+        self.num_samples = num_samples
+        self.image_shape = image_shape
+        self.gene_dim = gene_dim
+
+        # Simulate data
+        self.images = torch.randn(num_samples, *image_shape)
+        self.genomic_data = torch.randn(num_samples, gene_dim)
+        self.labels = torch.randint(0, 2, (num_samples, 1)).float()
+
+    def __len__(self):
+        return self.num_samples
+
+    def __getitem__(self, idx):
+        return {
+            'image': self.images[idx],
+            'genomic': self.genomic_data[idx],
+            'label': self.labels[idx]
+        }
 
